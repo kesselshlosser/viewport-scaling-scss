@@ -1,0 +1,15 @@
+#'''
+#VIEWPORT-SCALING-SCSS
+#/.gitignore
+#By James Walker.
+#Copyright James Walker 2018. Public-domain software under the Unlicense.
+#
+#This file contains git ignore directives for viewport-scaling-scss.
+#'''
+
+*.sublime-workspace
+*.sublime-project
+
+#'''
+#End of file.
+#'''
