@@ -1,0 +1,56 @@
+/*
+VIEWPORT-SCALING-SCSS
+/viewport-scaling.scss
+By James Walker.
+Copyright ©James Walker 2018. Public-domain software under the Unlicense.
+
+This file contains the complete source for James Walker's viewport-scaling-scss Sass mixin.
+*/
+
+/*
+strip_numeric_units($value)
+Strip the units from the numeric value $value.
+*/
+@function strip_numeric_units($value) {
+	//Check is numeric and not already unitless
+	@if type-of($value) == "number" and not unitless($value) {
+		@return $value / ($value * 0 + 1);
+	}
+
+	@return $value;
+}
+
+/*
+VIEWPORT SCALING MIXIN
+- $property - the name of the property to scale (e.g. "font-size")
+- $min-value - minimum property value (e.g. "16px")
+- $max-value - maximum property value (e.g. "72px")
+- $bp-floor - floor breakpoint value (e.g. "480px")
+- $bp-ceiling - ceiling breakpoint value (e.g. "960px")
+- $v-unit - viewport unit to scale by (e.g. "vw"/"vh")
+- $mq-prop - media query property to determine scaling by (e.g. "min-width")
+This scales a numeric property value of a named property between a floor and ceiling at specified breakpoints using responsive viewport units.
+*/
+@mixin viewport-scaling($property, $min-value, $max-value, $bp-floor, $bp-ceiling, $v-unit, $mq-prop) {
+	//Calculate the gradient
+	$m: (strip_numeric_units($max-value) - strip_numeric_units($min-value)) / (strip_numeric_units($bp-ceiling) - strip_numeric_units($bp-floor));
+
+	//Calculate offset
+	$c: #{$min-value - $m * $bp-floor};
+
+	//Multiply by 100($v-unit) to get "mx" for the linear curve equation (y=mx+c)
+	$mx: #{$m * 100}$v-unit;
+
+	//Produce output
+	#{$property}: #{$min-value};
+	@media all and ($mq-prop: #{$bp-floor}) {
+		#{$property}: calc(#{$mx} + #{$c});
+	}
+	@media all and ($mq-prop: #{$bp-ceiling}) {
+		#{$property}: #{$max-value};
+	}
+}
+
+/*
+End of file.
+*/
