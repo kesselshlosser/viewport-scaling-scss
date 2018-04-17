@@ -11,6 +11,9 @@ viewport-scaling-scss
 ---------------------
 *By James Walker. Public-domain software under the Unlicense.*
 
+## v1.1.1
+	- Fix `.npmignore` and npm publish.
+
 ## v1.1.0
 	- Initial project release.
 
