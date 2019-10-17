@@ -1,19 +1,3 @@
-<!--
-VIEWPORT-SCALING-SCSS
-/LICENSE.md
-By James Walker.
-Copyright James Walker 2018. Public-domain software under the Unlicense.
-
-This file contains the licensing information for viewport-scaling-scss.
--->
-
-viewport-scaling-scss
----------------------
-*By James Walker. Public-domain software under the Unlicense.*
-
-This project is granted to the public domain by its creator.
-This project is officially licensed under the Unlicense at https://unlicense.org. The full text follows:
-
 This is free and unencumbered software released into the public domain.
 
 Anyone is free to copy, modify, publish, use, compile, sell, or
@@ -38,9 +22,3 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
 For more information, please refer to <https://unlicense.org>
-
-Copyright ©James Walker 2018. Public-domain software under the Unlicense.
-
-<!--
-End of file.
--->

@@ -1,15 +1,4 @@
-<!--
-VIEWPORT-SCALING-SCSS
-/README.md
-By James Walker.
-Copyright James Walker 2018. Public-domain software under the Unlicense.
-
-This file contains the README message for viewport-scaling-scss.
--->
-
-viewport-scaling-scss
----------------------
-*By James Walker. Public-domain software under the Unlicense.*
+# viewport-scaling-scss
 
 This project contains a Sass mixin to enable responsive property value scaling based on viewport values.
 
@@ -54,10 +43,6 @@ Scales the width and height using `vw` units when the viewport width is between 
 
 **CodePen** [View on CodePen](https://codepen.io/ilmiont/pen/ZxMbrE)
 
-This project is released as public domain software under the Unlicense license.
+This project is released as public domain software under the Unlicense.
 
-Copyright ©James Walker 2018. Public-domain software under the Unlicense.
-
-<!--
-End of file.
--->
+©James Walker 2018.
